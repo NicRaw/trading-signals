@@ -1,0 +1,49 @@
+# .github/workflows/trading-signals.yml
+name: Trading Signal Scanner
+
+on:
+  schedule:
+    # Run every 30 minutes during market hours (9:30 AM - 4:00 PM ET)
+    # Using UTC times: 13:30 - 20:00 UTC (EST) or 14:30 - 21:00 UTC (EDT)
+    # This schedule is for EST (winter) - adjust for EDT (summer)
+    - cron: '30,0 13-20 * * 1-5'  # Every 30 minutes, Mon-Fri during market hours
+  
+  workflow_dispatch: # Allow manual triggers for testing
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  # Allow writing back to repo for state tracking
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Run trading signal scan
+      env:
+        SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+        SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+        RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
+      run: |
+        python main_with_state.py
+    
+    - name: Commit state changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add state/last_signal.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update signal state [skip ci]"
+        git push
