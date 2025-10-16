@@ -93,7 +93,7 @@ cp .env.example .env
 # Edit .env with your credentials
 
 # Test the system
-python main_with_state.py --force
+python main.py --force
 ```
 
 ### Environment Variables
@@ -270,7 +270,7 @@ trading-signals/
 │   └── helpers.py                 # Helper functions
 ├── state/
 │   └── last_signal.json           # State tracking (committed to repo)
-├── main_with_state.py             # Main entry point with state tracking
+├── main.py                        # Main entry point with state tracking
 ├── requirements.txt               # Python dependencies
 ├── .env.example                   # Environment variable template
 └── README.md                      # This file
@@ -396,10 +396,10 @@ class YourStrategy(BaseStrategy):
 
 ```bash
 # Test with force notification (ignores state)
-python main_with_state.py --force
+python main.py --force
 
 # Normal test (respects state)
-python main_with_state.py
+python main.py
 
 # Test data fetching
 python -c "from data.market_data import test_multi_symbol_fetching; test_multi_symbol_fetching()"
