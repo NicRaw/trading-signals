@@ -1,7 +1,6 @@
 {
-  "timestamp": "2025-12-04T20:42:45.923379",
-  "signal_type": "BUY_CROSS",
-  "confidence": 100,
-  "price": 683.89,
-  "action": "BUY SPY calls or UPRO shares"
+  "timestamp": "2025-12-05T14:42:24.473063",
+  "signal_type": null,
+  "confidence": 0,
+  "price": 0
 }
