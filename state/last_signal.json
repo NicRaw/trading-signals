@@ -1,7 +1,6 @@
 {
-  "timestamp": "2025-12-17T19:36:50.765830",
-  "signal_type": "SELL_CROSS",
-  "confidence": 70.0,
-  "price": 456.592205730483,
-  "action": "GO SHORT (SPY puts or SPXU shares)"
+  "timestamp": "2025-12-17T20:12:45.854330",
+  "signal_type": null,
+  "confidence": 0,
+  "price": 0
 }
