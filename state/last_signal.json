@@ -1,7 +1,6 @@
 {
-  "timestamp": "2026-02-18T20:26:36.642225",
-  "signal_type": "SELL_CROSS",
-  "confidence": 90,
-  "price": 682.85,
-  "action": "GO TO CASH (sell positions)"
+  "timestamp": "2026-02-19T15:11:28.364387",
+  "signal_type": null,
+  "confidence": 0,
+  "price": 0
 }
