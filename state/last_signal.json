@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-02-23T20:32:31.100864",
-  "signal_type": "BUY_CROSS",
-  "confidence": 80,
-  "price": 689.43,
-  "action": "BUY SPY calls or UPRO shares"
+  "timestamp": "2026-02-24T15:14:25.703906",
+  "signal_type": "SELL_CROSS",
+  "confidence": 90,
+  "price": 682.39,
+  "action": "GO TO CASH (sell positions)"
 }
