@@ -1,6 +1,7 @@
 {
-  "timestamp": "2026-04-02T19:40:21.402053",
-  "signal_type": null,
-  "confidence": 0,
-  "price": 0
+  "timestamp": "2026-04-03T13:54:52.626435",
+  "signal_type": "BOUNCE",
+  "confidence": 60,
+  "price": 655.83,
+  "action": "SMALL POSITION: SPY calls (short-term bounce play)"
 }
