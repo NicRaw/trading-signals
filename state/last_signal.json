@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-04-16T19:55:27.329774",
-  "signal_type": "BUY_CROSS",
-  "confidence": 100,
-  "price": 699.94,
-  "action": "BUY SPY calls or UPRO shares"
+  "timestamp": "2026-04-17T14:14:48.639457",
+  "signal_type": "OVERBOUGHT",
+  "confidence": 60,
+  "price": 701.66,
+  "action": "CONSIDER PROFIT TAKING on long positions"
 }
