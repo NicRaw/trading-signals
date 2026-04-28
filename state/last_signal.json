@@ -1,7 +1,6 @@
 {
-  "timestamp": "2026-04-27T19:01:59.328988",
-  "signal_type": "OVERBOUGHT",
-  "confidence": 60,
-  "price": 713.94,
-  "action": "CONSIDER PROFIT TAKING on long positions"
+  "timestamp": "2026-04-28T17:08:12.474041",
+  "signal_type": null,
+  "confidence": 0,
+  "price": 0
 }
